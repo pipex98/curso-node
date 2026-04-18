@@ -7,7 +7,7 @@ const { COMPUTERNAME, OS, npm_command } = process.env;
 // console.log(COMPUTERNAME);
 // console.log(npm_command);
 
-const characters = ['flash', 'Superman', 'Green Lantern', 'Batman'];
+const characters:string[] = ['flash', 'Superman', 'Green Lantern', 'Batman'];
 
 const [ , , , batman] = characters;
 
