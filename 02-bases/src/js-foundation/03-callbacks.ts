@@ -20,7 +20,7 @@ export function getUserById(id: number, callback: (err?: string, user?:User) => 
   });
 
   if (!user) {
-    return callback(`USUARIO no encontrado ${id}`);
+    return callback(`User not found with id ${id}`);; 
   }
   
   return callback( undefined, user);

@@ -1,0 +1,11 @@
+"use strict";
+// console.log(process.env.PORT ?? 3000);
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.characters = void 0;
+const { COMPUTERNAME, OS, npm_command } = process.env;
+// console.log(OS);
+// console.log(COMPUTERNAME);
+// console.log(npm_command);
+exports.characters = ['Flash', 'Superman', 'Green Lantern', 'Batman'];
+const [, , , batman] = exports.characters;
+// console.log(batman);

@@ -1,20 +1,24 @@
 // const getAgePlugin = require('get-age');
 
-export const getAge = ( birthAge:string ) => {
+export const getAge = (birthAge: string) => {
 
-  // return getAgePlugin(birthAge);
-  var today = new Date();
-  var birth = new Date(birthAge);
-  var age = today.getFullYear() - birth.getFullYear();
+  const today = new Date();
+  const birth = new Date(birthAge);
+  let age = today.getFullYear() - birth.getFullYear();
 
   // difference in months between the current date and the birthday
-  var differencesMonths = today.getMonth() - birth.getMonth();
+  const differencesMonths = today.getMonth() - birth.getMonth();
 
-  if (differencesMonths < 0 || (differencesMonths === 0 && today.getDate() < birth.getDate())) {
-      age--;
+  // flag to indicate whether the birthday has already passed or not.
+  const isBeforeBirthdayDay = differencesMonths === 0 && today.getDate() < birth.getDate();
+
+  if (differencesMonths < 0 || isBeforeBirthdayDay) {
+    age--;
   }
 
   return age;
+
+  // return getAgePlugin(birthAge);
 
 };
 
