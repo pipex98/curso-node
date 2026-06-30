@@ -8,7 +8,7 @@ describe('EmailService', () => {
 
   nodemailer.createTransport = jest.fn().mockReturnValue({
     sendMail: mockSendMail
-  });
+  }) as any;
 
   const emailService = new EmailService();
 
