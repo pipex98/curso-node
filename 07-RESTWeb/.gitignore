@@ -1,4 +1,13 @@
-
 node_modules/
 keys/
 .env
+
+/postgres
+
+dist/
+
+.agents/
+.claude/
+.windsurf/
+
+/generated/prisma
